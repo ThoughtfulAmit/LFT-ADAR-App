@@ -24,7 +24,7 @@ public class Splash extends Activity{
 				} catch (InterruptedException e){
 					e.printStackTrace();
 				}finally{
-					Intent openStartingPoint = new Intent("io.github.stupidamigo.lftadarcampaign.USER");
+					Intent openStartingPoint = new Intent("io.github.stupidamigo.lftadarcampaign.MENU");
 					startActivity(openStartingPoint);
 				}
 			}
