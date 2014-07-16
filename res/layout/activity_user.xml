@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/container"
+    android:orientation="vertical" >
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/button3"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="40dp"
+          android:text="Stop" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="133dp"
+          android:text="Start" />
+
+      <Button
+          android:id="@+id/button3"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/button1"
+          android:layout_below="@+id/button1"
+          android:layout_marginTop="76dp"
+          android:text="Edit Nos." />
+
+      <Button
+          android:id="@+id/button4"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/button2"
+          android:layout_alignTop="@+id/button3"
+          android:text="Send SOS msg" />
+
+      <ImageView
+          android:id="@+id/imageView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="46dp"
+          android:src="@drawable/ic_launcher" />
+      
+</RelativeLayout>
