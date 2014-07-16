@@ -57,20 +57,41 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:ems="10"
-        android:inputType="textMultiLine"
-         android:hint="Enter Message" />
+        android:hint="Enter Message"
+        android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/editTextPhoneNo"
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextPhoneNo1"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextPhoneNo3"
+        android:layout_alignBottom="@+id/editTextPhoneNo3"
         android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:hint="Phn No."
+        android:inputType="phone" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/editTextPhoneNo3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/button4"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Enter Phone No."
-        android:inputType="phone" >
-        
-    </EditText>
+        android:hint="Phn No."
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNo2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextPhoneNo1"
+        android:layout_alignBottom="@+id/editTextPhoneNo1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Phn No."
+        android:inputType="phone" />
 
 </RelativeLayout>

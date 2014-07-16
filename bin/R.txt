@@ -247,7 +247,7 @@ int id action_context_bar 0x7f06001d
 int id action_menu_divider 0x7f060016
 int id action_menu_presenter 0x7f060017
 int id action_mode_close_button 0x7f060024
-int id action_settings 0x7f060044
+int id action_settings 0x7f060047
 int id activity_chooser_view_content 0x7f060025
 int id always 0x7f06000b
 int id beginning 0x7f060011
@@ -263,6 +263,9 @@ int id dialog 0x7f06000e
 int id disableHome 0x7f060008
 int id dropdown 0x7f06000f
 int id editTextPhoneNo 0x7f060043
+int id editTextPhoneNo1 0x7f060044
+int id editTextPhoneNo2 0x7f060046
+int id editTextPhoneNo3 0x7f060045
 int id editTextSMS 0x7f060042
 int id edit_query 0x7f060030
 int id end 0x7f060013

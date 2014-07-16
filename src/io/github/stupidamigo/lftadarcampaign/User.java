@@ -23,7 +23,7 @@ public class User extends ActionBarActivity {
 	Button bstart, bstop;
 	MediaPlayer scream;
 	Button sendBtn;
-	EditText txtphoneNo;
+	EditText txtphoneNo1, txtphoneNo2, txtphoneNo3;
 	EditText txtMessage;
 
 	@Override
@@ -52,18 +52,24 @@ public class User extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				scream.pause();
+				if (scream.isPlaying()) {
+					scream.pause();
+				}
 			}
 		});
 
 		sendBtn = (Button) findViewById(R.id.button4);
-		txtphoneNo = (EditText) findViewById(R.id.editTextPhoneNo);
+		txtphoneNo1 = (EditText) findViewById(R.id.editTextPhoneNo1);
+		txtphoneNo2 = (EditText) findViewById(R.id.editTextPhoneNo2);
+		txtphoneNo3 = (EditText) findViewById(R.id.editTextPhoneNo3);
 		txtMessage = (EditText) findViewById(R.id.editTextSMS);
 
 		sendBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				sendSMSMessage();
-				txtphoneNo.setText("");
+				txtphoneNo1.setText("");
+				txtphoneNo2.setText("");
+				txtphoneNo3.setText("");
 				txtMessage.setText("");
 			}
 		});
@@ -77,17 +83,43 @@ public class User extends ActionBarActivity {
 	protected void sendSMSMessage() {
 		Log.i("Send SMS", "");
 
-		String phoneNo = txtphoneNo.getText().toString();
+		String phoneNo1 = txtphoneNo1.getText().toString();
+		String phoneNo2 = txtphoneNo2.getText().toString();
+		String phoneNo3 = txtphoneNo3.getText().toString();
 		String message = txtMessage.getText().toString();
-
+		String errorMsg = "SMS delivery failed on ";
+		message += " \nI'm in EMERGENCY. Please HELP me!!";
+		SmsManager smsManager = SmsManager.getDefault();
 		try {
-			SmsManager smsManager = SmsManager.getDefault();
-			smsManager.sendTextMessage(phoneNo, null, message, null, null);
+			// SmsManager smsManager = SmsManager.getDefault();
+			smsManager.sendTextMessage(phoneNo1, null, message, null, null);
+			// smsManager.sendTextMessage(phoneNo2, null, message, null, null);
+			// smsManager.sendTextMessage(phoneNo3, null, message, null, null);
+			Toast.makeText(getApplicationContext(), "SMS sent.",
+					Toast.LENGTH_LONG).show();
+		} catch (Exception e) {
+			
+			Toast.makeText(getApplicationContext(),
+					errorMsg + "1st phone no.", Toast.LENGTH_LONG).show();
+			e.printStackTrace();
+		}
+		try {
+			smsManager.sendTextMessage(phoneNo2, null, message, null, null);
+			Toast.makeText(getApplicationContext(), "SMS sent.",
+					Toast.LENGTH_LONG).show();
+		} catch (Exception e) {
+			
+			Toast.makeText(getApplicationContext(),
+					errorMsg + "2nd phone no.", Toast.LENGTH_LONG).show();
+			e.printStackTrace();
+		}
+		try {
+			smsManager.sendTextMessage(phoneNo3, null, message, null, null);
 			Toast.makeText(getApplicationContext(), "SMS sent.",
 					Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(),
-					"SMS faild, please try again.", Toast.LENGTH_LONG).show();
+					errorMsg + "3rd phone no.", Toast.LENGTH_LONG).show();
 			e.printStackTrace();
 		}
 	}
