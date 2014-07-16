@@ -39,4 +39,43 @@ public class Menu extends ListActivity {
 		}
 
 	}
+
+	
+	@Override
+	public boolean onCreateOptionsMenu(android.view.Menu menu) {
+		// TODO Auto-generated method stub
+		super.onCreateOptionsMenu(menu);
+		MenuInflater blowUp= getMenuInflater();
+		blowUp.inflate(R.menu.cool_menu, menu);
+		return true;
+	}
+
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+		case R.id.aboutUs:
+			Intent i = new Intent("io.github.stupidamigo.lftadarcampaign.ABOUT");
+			startActivity(i);
+			break;
+		case R.id.sos:
+			Intent sos_p = new Intent("io.github.stupidamigo.lftadarcampaign.SOSPREF");
+			startActivity(sos_p);
+			break;
+		case R.id.campaign:
+			/*
+			Intent q = new Intent("com.stupidamigo.sabasicapp.PREFS");
+			startActivity(q);
+			break;
+			*/
+		case R.id.exit:
+			finish();
+			break;
+		}
+		return false;
+
+	}	
+
+	
 }

@@ -30,7 +30,7 @@
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
         android:layout_marginTop="76dp"
-        android:text="Edit Nos." />
+        android:text="Check Nos." />
 
     <Button
         android:id="@+id/button4"

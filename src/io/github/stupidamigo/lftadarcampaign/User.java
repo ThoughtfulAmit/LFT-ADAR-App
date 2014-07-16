@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.os.Build;
+import android.preference.PreferenceManager;
 
 public class User extends ActionBarActivity {
 
@@ -57,7 +59,18 @@ public class User extends ActionBarActivity {
 				}
 			}
 		});
-
+		
+		/*
+		SharedPreferences getData = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		String et1 = getData.getString("num1", "8860441365");
+		String et2 = getData.getString("num2", "8860441365");
+		String et3 = getData.getString("num3", "8860441365");
+		
+		if(et1.contentEquals("123")){
+			//question.setText(et);
+			txtphoneNo1.setText("123 added");
+		}
+*/
 		sendBtn = (Button) findViewById(R.id.button4);
 		txtphoneNo1 = (EditText) findViewById(R.id.editTextPhoneNo1);
 		txtphoneNo2 = (EditText) findViewById(R.id.editTextPhoneNo2);

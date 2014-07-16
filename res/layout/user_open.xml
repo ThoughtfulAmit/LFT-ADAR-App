@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"
+        android:text="Send SOS msg" />
+
+    <EditText
+        android:id="@+id/etSMS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Enter Message"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tvPhn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etSMS"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="39dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvPhn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvPhn2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="34dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvPhn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvPhn3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="32dp"
+        android:text="TextView" />
+
+</RelativeLayout>
