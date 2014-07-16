@@ -34,6 +34,11 @@
             </intent-filter>
         </activity>
         
+         <activity
+            android:name=".UserOpen"
+            android:label="@string/app_name" >
+        </activity>
+        
         <activity
             android:name=".AboutUs"
             android:label="@string/app_name"

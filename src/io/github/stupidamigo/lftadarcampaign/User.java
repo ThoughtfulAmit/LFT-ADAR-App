@@ -1,10 +1,12 @@
 package io.github.stupidamigo.lftadarcampaign;
 
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.telephony.SmsManager;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,79 +15,30 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
-public class User extends ActionBarActivity {
+public class User extends ActionBarActivity implements OnClickListener{
 
 	Button bstart, bstop;
+	//Button bchk;
 	MediaPlayer scream;
 	Button sendBtn;
-	EditText txtphoneNo1, txtphoneNo2, txtphoneNo3;
-	EditText txtMessage;
+	TextView tvphn1,tvphn2,tvphn3;
+	String phn1, phn2, phn3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_user);
 
-		scream = MediaPlayer.create(User.this,
-				R.raw.stupid_amigo_deranged_women_scream);
-		bstart = (Button) findViewById(R.id.button1);
-		bstop = (Button) findViewById(R.id.button2);
-
-		scream.setLooping(true);
-		bstart.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				scream.start();
-			}
-
-		});
-
-		bstop.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (scream.isPlaying()) {
-					scream.pause();
-				}
-			}
-		});
-		
-		/*
-		SharedPreferences getData = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-		String et1 = getData.getString("num1", "8860441365");
-		String et2 = getData.getString("num2", "8860441365");
-		String et3 = getData.getString("num3", "8860441365");
-		
-		if(et1.contentEquals("123")){
-			//question.setText(et);
-			txtphoneNo1.setText("123 added");
-		}
-*/
-		sendBtn = (Button) findViewById(R.id.button4);
-		txtphoneNo1 = (EditText) findViewById(R.id.editTextPhoneNo1);
-		txtphoneNo2 = (EditText) findViewById(R.id.editTextPhoneNo2);
-		txtphoneNo3 = (EditText) findViewById(R.id.editTextPhoneNo3);
-		txtMessage = (EditText) findViewById(R.id.editTextSMS);
-
-		sendBtn.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View view) {
-				sendSMSMessage();
-				txtphoneNo1.setText("");
-				txtphoneNo2.setText("");
-				txtphoneNo3.setText("");
-				txtMessage.setText("");
-			}
-		});
+		initialize();
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -93,22 +46,59 @@ public class User extends ActionBarActivity {
 		}
 	}
 
+	private void initialize() {
+		// TODO Auto-generated method stub
+		scream = MediaPlayer.create(User.this,
+				R.raw.stupid_amigo_deranged_women_scream);
+		scream.setLooping(true);
+		bstart = (Button) findViewById(R.id.button1);
+		bstop = (Button) findViewById(R.id.button2);
+		//bchk = (Button) findViewById(R.id.button3);
+		sendBtn = (Button) findViewById(R.id.button4);
+		
+		
+		tvphn1 = (TextView) findViewById(R.id.tvphn11);
+		tvphn2 = (TextView) findViewById(R.id.tvphn22);
+		tvphn3 = (TextView) findViewById(R.id.tvphn33);
+		
+		SharedPreferences getData = PreferenceManager
+				.getDefaultSharedPreferences(getBaseContext());
+		phn1 = getData.getString("num1", "8860441365");
+		phn2 = getData.getString("num2", "8860441365");
+		phn3 = getData.getString("num3", "8860441365");
+		if(phn1 == ""){
+			tvphn1.setText("N/A");
+		}else{
+			tvphn1.setText(phn1);
+		}
+		if(phn2 == ""){
+			tvphn1.setText("N/A");
+		}else{
+			tvphn2.setText(phn2);
+		}
+		if(phn3 == ""){
+			tvphn1.setText("N/A");
+		}else{
+			tvphn3.setText(phn3);
+		}
+
+		bstart.setOnClickListener(this);
+		bstop.setOnClickListener(this);
+		//bchk.setOnClickListener(this);
+		sendBtn.setOnClickListener(this);
+	}
+
 	protected void sendSMSMessage() {
+		
 		Log.i("Send SMS", "");
 
-		String phoneNo1 = txtphoneNo1.getText().toString();
-		String phoneNo2 = txtphoneNo2.getText().toString();
-		String phoneNo3 = txtphoneNo3.getText().toString();
-		String message = txtMessage.getText().toString();
 		String errorMsg = "SMS delivery failed on ";
-		message += " \nI'm in EMERGENCY. Please HELP me!!";
+		String message = "I'm in EMERGENCY. Please HELP me!! \nCALL ASAP";
 		SmsManager smsManager = SmsManager.getDefault();
 		try {
-			// SmsManager smsManager = SmsManager.getDefault();
-			smsManager.sendTextMessage(phoneNo1, null, message, null, null);
-			// smsManager.sendTextMessage(phoneNo2, null, message, null, null);
-			// smsManager.sendTextMessage(phoneNo3, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent.",
+			
+			smsManager.sendTextMessage(phn1, null, message, null, null);
+			Toast.makeText(getApplicationContext(), "SMS sent on 1st phone no.",
 					Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			
@@ -117,8 +107,8 @@ public class User extends ActionBarActivity {
 			e.printStackTrace();
 		}
 		try {
-			smsManager.sendTextMessage(phoneNo2, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent.",
+			smsManager.sendTextMessage(phn2, null, message, null, null);
+			Toast.makeText(getApplicationContext(), "SMS sent on 2nd phone no.",
 					Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			
@@ -127,8 +117,8 @@ public class User extends ActionBarActivity {
 			e.printStackTrace();
 		}
 		try {
-			smsManager.sendTextMessage(phoneNo3, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent.",
+			smsManager.sendTextMessage(phn3, null, message, null, null);
+			Toast.makeText(getApplicationContext(), "SMS sent on 3rd phone no.",
 					Toast.LENGTH_LONG).show();
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(),
@@ -180,6 +170,31 @@ public class User extends ActionBarActivity {
 		super.onStop();
 		scream.release();
 		finish();
+	}
+
+	@Override
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		switch (arg0.getId()) {
+		case R.id.button1:
+			scream.start();
+			break;
+		case R.id.button2:
+			if (scream.isPlaying()) {
+				scream.pause();
+			}
+			break;
+		/*
+		case R.id.button3:
+			Intent a = new Intent(User.this, UserOpen.class);
+			startActivity(a);
+			break;
+			*/
+		case R.id.button4:
+			sendSMSMessage();
+			break;
+			
+		}
 	}
 
 }

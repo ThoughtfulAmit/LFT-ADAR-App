@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    
-<EditTextPreference
+
+    <EditTextPreference
         android:key="num1"
         android:summary="Enter 1st Phone No."
         android:title="Phone No.1" >
     </EditTextPreference>
-    
-<EditTextPreference
+    <EditTextPreference
         android:key="num2"
         android:summary="Enter 2nd Phone No."
         android:title="Phone No.2" >
     </EditTextPreference>
-
-<EditTextPreference
+    <EditTextPreference
         android:key="num3"
         android:summary="Enter 3rd Phone No."
         android:title="Phone No.3" >
     </EditTextPreference>
-    
 
 </PreferenceScreen>
