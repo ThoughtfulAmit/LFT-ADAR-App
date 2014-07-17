@@ -74,7 +74,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 						emailaddress);
 				emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
 						"LFT Member via" + vname + "," + clg); 
-				//Subject = "ADAR Pledge via" + volunteerName + "," + collegeName 
+				//Subject = "ADAR Member via" + volunteerName + "," + collegeName 
 				emailIntent.setType("plain/text");
 				emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
 				startActivity(emailIntent);
@@ -92,7 +92,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 				String emailaddress[] = { emailAdd };
 				String message = "Well hello "
 						+ name
-						+ ",\nYou just took a Pledge to stand in favour of Anti-Drug and Anti-Ragging Campaigns."
+						+ ",\nYou just took a Pledge to stand in favour of Anti-Drug and Anti-Ragging Campaigns. You can also become a member of LFT by paying the annual fee of Rs.50 only."
 						+ "We welcome you in the ever expanding family of Leaders For Tomorrow. Your details as per our records are: "
 						+"\nName: " + name
 						+"\nEmail: " + emailAdd
@@ -108,7 +108,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
 						emailaddress);
 				emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
-						"I hate you!"); 
+						"LFT Pledge via" + vname + "," + clg); 
 				//Subject = "ADAR Pledge via" + volunteerName + "," + collegeName 
 				emailIntent.setType("plain/text");
 				emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
