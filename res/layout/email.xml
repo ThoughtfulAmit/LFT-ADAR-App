@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:weightSum="100" android:layout_height="match_parent">
+	<ScrollView android:layout_weight="20" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent">
+			
+			<TextView android:text="Person's name" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etName"></EditText>
+			
+			<TextView android:text="Email address:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etEmails">
+			</EditText>
+			
+			<TextView android:text="Phone No.:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etPhn" android:inputType="phone"></EditText>
+			
+			<TextView android:text="Year"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etYr" android:inputType="number"></EditText>
+			
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_weight="40"
+		android:layout_height="fill_parent">
+		<Button android:text="Take a Pledge" android:id="@+id/bPledge"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"></Button>
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_weight="40"
+		android:layout_height="fill_parent">
+		<Button android:text="Become a Member" android:id="@+id/bMember"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"></Button>
+	</LinearLayout>
+</LinearLayout>

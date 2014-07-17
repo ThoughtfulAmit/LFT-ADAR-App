@@ -64,11 +64,10 @@ public class Menu extends ListActivity {
 			startActivity(sos_p);
 			break;
 		case R.id.campaign:
-			/*
-			Intent q = new Intent("com.stupidamigo.sabasicapp.PREFS");
-			startActivity(q);
-			break;
-			*/
+			String s = "io.github.stupidamigo.lftadarcampaign.CMNGRPREF";
+			Intent cmngr_q = new Intent(s);
+			startActivity(cmngr_q);
+			
 		case R.id.exit:
 			finish();
 			break;

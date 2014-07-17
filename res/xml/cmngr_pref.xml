@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+
+    <EditTextPreference
+        android:key="volunteer"
+        android:summary="Enter your name"
+        android:title="Volunteer Name" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:key="password"
+        android:summary="Enter the password"
+        android:title="Password" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:key="college"
+        android:summary="Enter College's Name"
+        android:title="College's Name" >
+    </EditTextPreference>
+</PreferenceScreen>

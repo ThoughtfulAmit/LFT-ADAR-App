@@ -53,7 +53,7 @@ public class User extends ActionBarActivity implements OnClickListener{
 		scream.setLooping(true);
 		bstart = (Button) findViewById(R.id.button1);
 		bstop = (Button) findViewById(R.id.button2);
-		//bchk = (Button) findViewById(R.id.button3);
+
 		sendBtn = (Button) findViewById(R.id.button4);
 		
 		
@@ -84,7 +84,6 @@ public class User extends ActionBarActivity implements OnClickListener{
 
 		bstart.setOnClickListener(this);
 		bstop.setOnClickListener(this);
-		//bchk.setOnClickListener(this);
 		sendBtn.setOnClickListener(this);
 	}
 
@@ -184,12 +183,6 @@ public class User extends ActionBarActivity implements OnClickListener{
 				scream.pause();
 			}
 			break;
-		/*
-		case R.id.button3:
-			Intent a = new Intent(User.this, UserOpen.class);
-			startActivity(a);
-			break;
-			*/
 		case R.id.button4:
 			sendSMSMessage();
 			break;
