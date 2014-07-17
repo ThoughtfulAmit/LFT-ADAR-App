@@ -1,6 +1,7 @@
 package io.github.stupidamigo.lftadarcampaign;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,6 +21,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 	String emailAdd, name, phn, yr;
 	String vname, pwd, clg;
 	Button LftPledge, LftMember;
+	InputMethodManager imm1, imm2, imm3, imm4;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,14 @@ public class CampaignManager extends Activity implements OnClickListener {
 		initializeVars();
 		LftPledge.setOnClickListener(this);
 		LftMember.setOnClickListener(this);
+		
+		//for hiding the Keyboard after using an EditText
+		imm1 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm2 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm3 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm4 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		
+
 	}
 
 	private void initializeVars() {
@@ -83,6 +94,13 @@ public class CampaignManager extends Activity implements OnClickListener {
 
 		switch (arg0.getId()) {
 		case R.id.bMember:
+			
+			//hiding keyboard
+			imm1.hideSoftInputFromWindow(personsName.getWindowToken(), 0);
+			imm2.hideSoftInputFromWindow(personsEmail.getWindowToken(), 0);
+			imm3.hideSoftInputFromWindow(personsPhn.getWindowToken(), 0);
+			imm4.hideSoftInputFromWindow(personsYr.getWindowToken(), 0);
+			
 			convertETVarsIntoStrings();
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
@@ -127,6 +145,12 @@ public class CampaignManager extends Activity implements OnClickListener {
 			break;
 		case R.id.bPledge:
 
+			//hiding keyboard
+			imm1.hideSoftInputFromWindow(personsName.getWindowToken(), 0);
+			imm2.hideSoftInputFromWindow(personsEmail.getWindowToken(), 0);
+			imm3.hideSoftInputFromWindow(personsPhn.getWindowToken(), 0);
+			imm4.hideSoftInputFromWindow(personsYr.getWindowToken(), 0);
+			
 			convertETVarsIntoStrings();
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {

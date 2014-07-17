@@ -63,9 +63,9 @@ public class User extends ActionBarActivity implements OnClickListener{
 		
 		SharedPreferences getData = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		phn1 = getData.getString("num1", "8860441365");
-		phn2 = getData.getString("num2", "8860441365");
-		phn3 = getData.getString("num3", "8860441365");
+		phn1 = getData.getString("num1", "Phn No.1: N/A");
+		phn2 = getData.getString("num2", "Phn No.2: N/A");
+		phn3 = getData.getString("num3", "Phn No.3: N/A");
 		if(phn1.contentEquals("")){
 			//default value from xml 
 		}else{
