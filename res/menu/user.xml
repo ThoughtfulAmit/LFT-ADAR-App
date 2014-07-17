@@ -3,10 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="io.github.stupidamigo.lftadarcampaign.User" >
 
+    <!--
     <item
-        android:id="@+id/action_settings"
+       android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
+        
+         <item
+        android:id="@+id/u_aboutUs"
+        android:alphabeticShortcut="a"
+        android:numericShortcut="1"
+        android:title="About Us"/>
+    -->
+    <item
+        android:id="@+id/u_exit"
+        android:title="Home"/>
+   
+    <item
+        android:id="@+id/u_sos"
+        android:title="User Settings"/>
+    
 
 </menu>

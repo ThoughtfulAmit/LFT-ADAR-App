@@ -66,18 +66,18 @@ public class User extends ActionBarActivity implements OnClickListener{
 		phn1 = getData.getString("num1", "8860441365");
 		phn2 = getData.getString("num2", "8860441365");
 		phn3 = getData.getString("num3", "8860441365");
-		if(phn1 == ""){
-			tvphn1.setText("N/A");
+		if(phn1.contentEquals("")){
+			//default value from xml 
 		}else{
 			tvphn1.setText(phn1);
 		}
-		if(phn2 == ""){
-			tvphn1.setText("N/A");
+		if(phn2.contentEquals("")){
+			//default value from xml
 		}else{
 			tvphn2.setText(phn2);
 		}
-		if(phn3 == ""){
-			tvphn1.setText("N/A");
+		if(phn3.contentEquals("")){
+			//default value from xml
 		}else{
 			tvphn3.setText(phn3);
 		}
@@ -132,6 +132,7 @@ public class User extends ActionBarActivity implements OnClickListener{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.user, menu);
 		return true;
+				
 	}
 
 	@Override
@@ -139,11 +140,18 @@ public class User extends ActionBarActivity implements OnClickListener{
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch (item.getItemId()) {
+		
+		case R.id.u_sos:
+			Intent sos_p = new Intent("io.github.stupidamigo.lftadarcampaign.SOSPREF");
+			startActivity(sos_p);
+			break;
+		
+		case R.id.u_exit:
+			finish();
+			break;
 		}
-		return super.onOptionsItemSelected(item);
+		return false;
 	}
 
 	/**

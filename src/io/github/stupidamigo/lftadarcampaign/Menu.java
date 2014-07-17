@@ -55,20 +55,18 @@ public class Menu extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
-		case R.id.aboutUs:
+		case R.id.m_aboutUs:
 			Intent i = new Intent("io.github.stupidamigo.lftadarcampaign.ABOUT");
 			startActivity(i);
 			break;
-		case R.id.sos:
-			Intent sos_p = new Intent("io.github.stupidamigo.lftadarcampaign.SOSPREF");
-			startActivity(sos_p);
-			break;
+		
+		/* On clicking back, exited, couldn't resolve at the moment
 		case R.id.campaign:
-			String s = "io.github.stupidamigo.lftadarcampaign.CMNGRPREF";
-			Intent cmngr_q = new Intent(s);
+			//String s = "io.github.stupidamigo.lftadarcampaign.CMNGRPREF";
+			Intent cmngr_q = new Intent("io.github.stupidamigo.lftadarcampaign.CMNGRPREF");
 			startActivity(cmngr_q);
-			
-		case R.id.exit:
+			*/
+		case R.id.m_exit:
 			finish();
 			break;
 		}

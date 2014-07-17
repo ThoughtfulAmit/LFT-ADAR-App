@@ -3,20 +3,19 @@
     
     <item
     android:title="About Us"
-    android:id="@+id/aboutUs"
+    android:id="@+id/m_aboutUs"
     android:numericShortcut="1"
     android:alphabeticShortcut="a"/>
-        <item
-    android:title="SOS Phone nos."
-    android:id="@+id/sos"
-    />
+       
+        <!-- 
           <item
     android:title="Campaign Manager"
     android:id="@+id/campaign"
     />
+     -->
       <item
     android:title="Exit"
-    android:id="@+id/exit"
+    android:id="@+id/m_exit"
     />
 
 </menu>
