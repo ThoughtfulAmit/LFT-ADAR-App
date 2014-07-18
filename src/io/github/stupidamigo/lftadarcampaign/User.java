@@ -63,9 +63,9 @@ public class User extends ActionBarActivity implements OnClickListener{
 		
 		SharedPreferences getData = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		phn1 = getData.getString("num1", "Phn No.1: N/A");
-		phn2 = getData.getString("num2", "Phn No.2: N/A");
-		phn3 = getData.getString("num3", "Phn No.3: N/A");
+		phn1 = getData.getString("num1", "Set Phone No.1");
+		phn2 = getData.getString("num2", "Set Phone No.2");
+		phn3 = getData.getString("num3", "Set Phone No.3");
 		if(phn1.contentEquals("")){
 			//default value from xml 
 		}else{
@@ -95,10 +95,16 @@ public class User extends ActionBarActivity implements OnClickListener{
 		String message = "I'm in EMERGENCY. Please HELP me!! \nCALL ASAP";
 		SmsManager smsManager = SmsManager.getDefault();
 		try {
-			
-			smsManager.sendTextMessage(phn1, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent on 1st phone no.",
-					Toast.LENGTH_LONG).show();
+			//to avoid first time issue
+			if(phn1.contentEquals("Set Phone No.1")){
+				Toast.makeText(getApplicationContext(),
+						errorMsg + "1st phone no.", Toast.LENGTH_LONG).show();
+			}else{
+
+				smsManager.sendTextMessage(phn1, null, message, null, null);
+				Toast.makeText(getApplicationContext(), "SMS sent on 1st phone no.",
+						Toast.LENGTH_LONG).show();
+			}
 		} catch (Exception e) {
 			
 			Toast.makeText(getApplicationContext(),
@@ -106,9 +112,15 @@ public class User extends ActionBarActivity implements OnClickListener{
 			e.printStackTrace();
 		}
 		try {
-			smsManager.sendTextMessage(phn2, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent on 2nd phone no.",
-					Toast.LENGTH_LONG).show();
+			if(phn2.contentEquals("Set Phone No.2")){
+				Toast.makeText(getApplicationContext(),
+						errorMsg + "2nd phone no.", Toast.LENGTH_LONG).show();
+			}else{
+
+				smsManager.sendTextMessage(phn2, null, message, null, null);
+				Toast.makeText(getApplicationContext(), "SMS sent on 2nd phone no.",
+						Toast.LENGTH_LONG).show();	
+			}
 		} catch (Exception e) {
 			
 			Toast.makeText(getApplicationContext(),
@@ -116,9 +128,16 @@ public class User extends ActionBarActivity implements OnClickListener{
 			e.printStackTrace();
 		}
 		try {
-			smsManager.sendTextMessage(phn3, null, message, null, null);
-			Toast.makeText(getApplicationContext(), "SMS sent on 3rd phone no.",
-					Toast.LENGTH_LONG).show();
+			if(phn3.contentEquals("Set Phone No.3")){
+				Toast.makeText(getApplicationContext(),
+						errorMsg + "3rd phone no.", Toast.LENGTH_LONG).show();
+			}
+			else{
+
+				smsManager.sendTextMessage(phn3, null, message, null, null);
+				Toast.makeText(getApplicationContext(), "SMS sent on 3rd phone no.",
+						Toast.LENGTH_LONG).show();	
+			}
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(),
 					errorMsg + "3rd phone no.", Toast.LENGTH_LONG).show();

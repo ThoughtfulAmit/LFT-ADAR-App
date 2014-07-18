@@ -53,9 +53,9 @@ public class CampaignManager extends Activity implements OnClickListener {
 
 		SharedPreferences getData = PreferenceManager
 				.getDefaultSharedPreferences(getBaseContext());
-		vname = getData.getString("volunteer", "Amit");
-		pwd = getData.getString("password", "8860441365");
-		clg = getData.getString("college", "BVCOE");
+		vname = getData.getString("volunteer", "");
+		pwd = getData.getString("password", "");
+		clg = getData.getString("college", "");
 
 	}
 
