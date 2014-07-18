@@ -108,7 +108,9 @@ public class CampaignManager extends Activity implements OnClickListener {
 						"Fill Campaign Manager Settings", Toast.LENGTH_LONG)
 						.show();
 			} else {
+				
 				String emailaddress[] = { emailAdd };
+				String[] BCC = {"coreteam.lft@gmail.com"};
 				String message = "Well hello "
 						+ name
 						+ ",\nYou just became a member of LFT by paying the annual fee of Rs.50 only."
@@ -130,8 +132,10 @@ public class CampaignManager extends Activity implements OnClickListener {
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
+				
 				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
 						emailaddress);
+				emailIntent.putExtra(Intent.EXTRA_BCC, BCC);
 				emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
 						"LFT Member via " + vname + "," + clg);
 				// Subject = "ADAR Member via" + volunteerName + "," +
@@ -159,6 +163,8 @@ public class CampaignManager extends Activity implements OnClickListener {
 						.show();
 			} else {
 				String emailaddress[] = { emailAdd };
+				String[] BCC = {"coreteam.lft@gmail.com"};
+				
 				String message = "Well hello "
 						+ name
 						+ ",\nYou just took a Pledge to stand in favour of Anti-Drug and Anti-Ragging Campaigns. You can also become a member of LFT by paying the annual fee of Rs.50 only."
@@ -180,8 +186,10 @@ public class CampaignManager extends Activity implements OnClickListener {
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
+				
 				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
 						emailaddress);
+				emailIntent.putExtra(Intent.EXTRA_BCC, BCC);
 				emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,
 						"LFT Pledge via " + vname + "," + clg);
 				// Subject = "ADAR Pledge via" + volunteerName + "," +
