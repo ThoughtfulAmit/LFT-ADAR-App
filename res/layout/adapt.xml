@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our green initiative- Adopt A Plant (ADAPT) plants saplings across all campuses with LFT Clubs once a year.\n\nThis campaign is usually conducted in the month of September by each college unit. As a part of the campaign the students motivate their peers to join them in planting and adopting a plant. These students come together to plant saplings in over 100 locations in and around their colleges.\n\nA total of 8000 saplings have been planted and adopted by the LFT members from various college clubs who pledged to plant and nurture the saplings in their years on campus." >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

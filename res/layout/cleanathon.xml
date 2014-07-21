@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To spread the message of the importance of maintaining a clean surrounding, we launched a cleanliness drive, Cleanathon.\n\nThis academic year, Cleanathon went to 100 campuses with the mission to pick up litter, plastic and other garbage that was otherwise made unseen by passers-by. The campaign was concluded with a rally across the arterial roads of North Campus, Delhi University, where 110 college coordinators of Leaders for Tomorrow came together to spread the message for a clean and green Delhi.\n\nThe campaign was a symbolic effort to ignite the consciousness of the college students towards the basic steps that can be taken by us to make our city cleaner instead of waiting for the governing systems to take action." >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

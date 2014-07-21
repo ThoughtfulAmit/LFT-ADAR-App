@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Collection Drives are organised with much zeal and zest by all campus units of Leaders for Tomorrow. The event helps the campus leaders, members and volunteers understand the importance of sharing knowledge and equip as many people as possible with the weapon of information for the development of our nation.\n\nAs a part of this event- which is backed by a huge publicity campaign on campus, through hand made posters, SMS, emails and announcements- cartons were set up in various prominent students joints with our logo and tags where students were encouraged to drop old story books and general knowledge books so that the volunteers could distribute among those who needed it.\n\nAs a follow up activity, the collected books are categorised into various sections such as – science, fairy tales, moral books etc and donated to various shelters and schools for the lesser privileged; especially those that were seeking to build libraries or didn’t have any provision for such exposure. " >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

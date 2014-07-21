@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Leaders for Tomorrow (LFT) is a not for profit youth movement aimed at encouraging leadership in social change. Last year, ADAR-our awareness campaign to eradicate the twin menaces of ragging and substance abuse was led by 1200 youngsters and was joined by 5 Lakh students." >
+        android:text="Leaders for Tomorrow (LFT) is a not for profit youth movement aimed at encouraging leadership in social change. \n\nLast year, ADAR-our awareness campaign to eradicate the twin menaces of ragging and substance abuse was led by 1200 youngsters and was joined by 5 Lakh students." >
     </TextView>
 
 </LinearLayout>

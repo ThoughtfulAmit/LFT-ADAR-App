@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" LFT Leaders visit shelter homes and other ngos to spend time with those who live there. This is to ignite the social consciousness in the youth and also to instill in them the values of compassion.\n\nThe volunteers and leaders play games, read stories and participate in the daily activities of the NGO they visit for a few hours as a part of this programme.\n\nOften the shelter homes visited through this programmes are also beneficiaries of our collection drives. " >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

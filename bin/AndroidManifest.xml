@@ -76,6 +76,115 @@
         </activity>
         
         <activity
+            android:name=".Events"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.EVENTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".NationalLevel"
+            android:label="LFT Summit"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.NATIONALLEVEL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".Adar"
+            android:label="Anti Drugs and Anti Ragging Campaign"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.ADAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".Adapt"
+            android:label="Adopt A Plant Campaign - ADAPT"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.ADAPT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cleanathon"
+            android:label="Mass Cleanliness Drive"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.CLEANATHON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ClothCollection"
+            android:label="CLOTH COLLECTION DRIVE"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.CLOTHCOLLECTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BookCollection"
+            android:label="BOOK COLLECTION DRIVE"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.BOOKCOLLECTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VisitForCompassion"
+            android:label="VISIT FOR COMPASSION"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.VISITFORCOMPASSION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BeTheLeader"
+            android:label="BE THE LEADER"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.BETHELEADER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StateLevel"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.STATELEVEL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CampusActivities"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.CAMPUSACTIVITIES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".SosPref"
             android:label="@string/app_name" >
             <intent-filter>

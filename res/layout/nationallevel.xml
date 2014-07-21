@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Every year, we conduct a ‘Leaders for Tomorrow Summit’ – a one-of-a-kind Youth Leadership Summit held in the month of February.\n\nThis is the biggest gathering of young leaders and achievers from India and across the globe. Through the summit we are aiming at providing the youth a platform to exchange ideas and build a network of socially committed leaders for tomorrow.\n\nThe Summit reaches out to the Youth across borders, directly reaching out to lakhs of Youth across India. It is a multi-formatted event inclusive of Leadership Conclaves on various social issues, cultural events, film screenings etc.\n\nThe Programme also includes a series of Competitive events designed to encourage the youth to think upon various development issues. These events include: Debates, Streetplay competitions, Music contests, Caricature Making Competition, Poster Making, TShirt Designing, Poetry Competition, Best Out of Waste among others." >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

@@ -25,15 +25,15 @@ public class MediaCoverage extends Activity implements OnClickListener{
 		th.setup();
 		TabSpec specs = th.newTabSpec("tag1");
 		specs.setContent(R.id.tab1);
-		specs.setIndicator("TheHindu");
+		specs.setIndicator("The Hindu");
 		th.addTab(specs);
 		specs = th.newTabSpec("tag2");
 		specs.setContent(R.id.tab2);
-		specs.setIndicator("HT");
+		specs.setIndicator("Hindustan Times");
 		th.addTab(specs);
 		specs = th.newTabSpec("tag3");
 		specs.setContent(R.id.tab3);
-		specs.setIndicator("IndianExpress");
+		specs.setIndicator("Indian Express");
 		th.addTab(specs);
 
 		specs = th.newTabSpec("tag4");

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We at Leaders For Tomorrow believe that it is not enough to just ask the youth to find the hidden leader in them. They must also be trained in leading social change. Thus, we engage our leaders and volunteers in ‘Be The Leader’ Programme that focuses on Youth Advocacy.\n\nThe programme is headed by our college campus leaders across all major colleges of Delhi University and IP University. During the programme, they go to different classrooms and prominent places on campus to interact with them on the need for youth to get involved in social change. " >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

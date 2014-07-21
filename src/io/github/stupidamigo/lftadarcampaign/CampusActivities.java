@@ -6,20 +6,18 @@ import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Menu extends ListActivity {
+public class CampusActivities extends ListActivity {
 
-	String classes[] = { "User", "CampaignManager", "Events", "MediaCoverage", "ContactUs" };
+	String classes[] = { "ClothCollection", "BookCollection", "VisitForCompassion", "BeTheLeader" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<String>(Menu.this,
+		setListAdapter(new ArrayAdapter<String>(CampusActivities.this,
 				android.R.layout.simple_list_item_1, classes));
 
 	}
@@ -32,7 +30,7 @@ public class Menu extends ListActivity {
 		try {
 			Class ourClass = Class
 					.forName("io.github.stupidamigo.lftadarcampaign." + cheese);
-			Intent ourIntent = new Intent(Menu.this, ourClass);
+			Intent ourIntent = new Intent(CampusActivities.this, ourClass);
 			startActivity(ourIntent);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -72,7 +70,7 @@ public class Menu extends ListActivity {
 		}
 		return false;
 
-	}	
+	}
 
-	
+
 }
