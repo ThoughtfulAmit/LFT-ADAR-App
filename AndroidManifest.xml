@@ -39,6 +39,11 @@
             android:label="@string/app_name" >
         </activity>
         
+           <activity
+            android:name=".MediaCoverage"
+            android:label="@string/app_name" >
+        </activity>
+        
          <activity
             android:name=".CampaignManager"
             android:label="@string/app_name" >
