@@ -44,6 +44,16 @@
             android:label="@string/app_name" >
         </activity>
         
+           <activity
+            android:name=".ContactUs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.CONTACTUS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
          <activity
             android:name=".CampaignManager"
             android:label="@string/app_name" >
@@ -94,7 +104,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
+        <activity
+            android:name=".StateLevel"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.STATELEVEL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
          <activity
             android:name=".Adar"
             android:label="Anti Drugs and Anti Ragging Campaign"
@@ -122,6 +140,15 @@
             android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="io.github.stupidamigo.lftadarcampaign.CLEANATHON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CampusActivities"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="io.github.stupidamigo.lftadarcampaign.CAMPUSACTIVITIES" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -167,23 +194,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StateLevel"
-            android:label="@string/app_name" >
+            android:name=".IYM"
+            android:label="Igniting Young Minds (IYM)"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
-                <action android:name="io.github.stupidamigo.lftadarcampaign.STATELEVEL" />
+                <action android:name="io.github.stupidamigo.lftadarcampaign.IYM" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".CampusActivities"
-            android:label="@string/app_name" >
+            android:name=".SDP"
+            android:label="Skill Development Programme"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
-                <action android:name="io.github.stupidamigo.lftadarcampaign.CAMPUSACTIVITIES" />
+                <action android:name="io.github.stupidamigo.lftadarcampaign.SDP" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name=".SosPref"
             android:label="@string/app_name" >

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Even as there is an increase in the number of youngsters graduating in India, 85% of our graduates are found unemployable. There is a need to bridge the gap between what is taught in textbooks and the needs of various sectors. i.e. we must enhance the employability of our youngsters.\nKeeping this challenge in mind, Leaders for Tomorrow launched a skill development wing to skills that help you overcome the day to day challenges of life.\n\nLeaders for tomorrow trains you in the following life skills: communication, planning, group discussion, interview skills, leadership teamwork, body language, conflict management.\nThese workshops include activity based sessions that are conducted to facilitate easy learning, games and ice –breakers to ensure the participants enjoy learning, in-house interactions and discussions along with demonstrations and practical tasks.\nIn its first year, Leaders For Tomorrow’s Skill Development Project conducted a series of weekend workshops on various aspects of leadership, focusing on life skills.\n\nThese workshops provided an opportunity for the college students to develop skills that will help them face interviews, group discussions and other challenges in life.\nLeaders For Tomorrow conducts a variety of workshops and training programmes in partnership with educational institutions to help develop the life skills of their students.\nWe also conducted programmes for colleges under Sharda University and Ansal’s University. Our module for school students was well received at BlueBells School International.\n\nThis year our Skill Development Project reached nearly 500 students imparting in them skills that will help them bridge the gap between academic exposure and the requirement of various employment opportunities." >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

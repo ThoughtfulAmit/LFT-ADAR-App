@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="20" >
+        android:layout_weight="30" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,9 +18,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Person&apos;s name" >
+                android:text="Your name" >
             </TextView>
-<!-- To remove the focus from EditText, added following linear layout -->
+
             <LinearLayout
                 android:layout_width="0px"
                 android:layout_height="0px"
@@ -31,31 +31,21 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/etName"
+                android:id="@+id/etName_cu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
             </EditText>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email address:" >
-            </TextView>
-
-            <EditText
-                android:id="@+id/etEmails"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </EditText>
+            
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone No.:" >
+                android:text="Your Phone No.:" >
             </TextView>
 
             <EditText
-                android:id="@+id/etPhn"
+                android:id="@+id/etPhn_cu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone" >
@@ -64,44 +54,46 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Year" >
+                android:text="Your College:" >
             </TextView>
 
             <EditText
-                android:id="@+id/etYr"
+                android:id="@+id/etClg_cu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" >
+                android:layout_height="wrap_content">
             </EditText>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Message" >
+            </TextView>
+            
+            
+        <EditText
+            android:id="@+id/etMessage_cu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="40"
+        android:layout_weight="70"
         android:orientation="vertical" >
 
+
         <Button
-            android:id="@+id/bPledge"
+            android:id="@+id/bSendMail_cu"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Take a Pledge" >
+            android:text="Send Mail" >
         </Button>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="40"
-        android:orientation="vertical" >
-
-        <Button
-            android:id="@+id/bMember"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Become a Member" >
-        </Button>
-    </LinearLayout>
+    
 
 </LinearLayout>

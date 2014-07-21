@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvNLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To take forward our dream of empowering the youth with skills that will help them contribute to the development of the nation, we launched Igniting Young Minds (IYM) – a life skill education programme for the less privileged in 2010.\nIn addition to enhancing the growth and development of children belonging to the lower economic strata of society, IYM also provides an opportunity for young college students to be socially responsible and use their acquired skills and knowledge for the betterment of society.\n\nAs a part of this initiative, the volunteers are provided with a student-teacher logbook on guidelines for the programme and progress made by each student is closely observed.\nThis programme has been structured keeping in mind the academic schedules of college students. Our volunteers contribute just 1 hour on weekends for a period of 8 weeks to complete the programme successfully.\nThe topics and subjects covered include: moral values, confidence building, spoken English, etiquettes and manners, personal hygiene and general knowledge.\nThis year, IYM was able to make a huge impact by reaching out to nearly 1000 students from across the city with a volunteer taskforce 450 youth volunteers from the LFT Clubs in various campuses
+\n\nOPPORTUNITIES FOR YOU IN IYM
+\n\n
+• JOIN AS CENTRE HEADS
+\n
+As one of our 50 centre heads, you shall get an opportunity to lead the execution of the project in 1 shelter home in Delhi NCR.
+\n\n
+• JOIN US AS A CORE TEAM MEMBER
+\n
+You get to participate in planning, implementation and expansion of the project at the state level. You will be involved in the overall management of our flagship project.
+\n\n
+• VOLUNTEER
+\n
+You get to work at an assigned center 1 hour a week on saturday/sunday with a small group of children. This is a 6 week long certified opportunity, comprising of 6 weekend sessions. Sessions will be on moral values, spoken english, manners and etiquettes etc for small children.
+" >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>
