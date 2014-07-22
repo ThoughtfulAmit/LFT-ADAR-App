@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="At present,\n\nONLY ADAR CAMPAIGN is going on.\n\nWe'll update you when our next event rolls out.\n\nTo know more about latest happenings in LEADERS FOR TOMORROW, use the ContactUs feature of this app.\n\nThanks,\nTeam LFT" >
+        android:text="At present,\n\nONLY ADAR CAMPAIGN is going on.\n\nWe'll update you when our next event rolls out.\n\nTo know more about latest happenings in LEADERS FOR TOMORROW, use the ContactUs feature of this app." >
     </TextView>
 
 </LinearLayout>

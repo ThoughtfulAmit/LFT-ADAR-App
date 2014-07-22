@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="10dp"
-            android:text="" />
+            android:text="\nPeople often say that motivation doesn't last. Well, neither does bathing - that's why we recommend it daily – Zig Ziglar\n\nWelcome to your daily dose of Motivation.\nHere is a collection of some of the best motivating quotes from famous speakers and historical figures.\n\nGet Motivated and Be Inspirational !!" />
             
                        
         </LinearLayout>
@@ -40,7 +40,7 @@
             android:id="@+id/btn_q"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Get Motivated and Be Inspirational !!" />
+            android:text="START" />
         
        
     </LinearLayout>
@@ -51,7 +51,12 @@
         android:layout_weight="40"
         android:orientation="vertical" >
 
-       
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Share this Quote!!" />
+        
     </LinearLayout>
 
 </LinearLayout>

@@ -5,19 +5,25 @@ import java.util.Random;
 import java.util.Set;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Quotes extends Activity implements OnClickListener {
 
 	TextView tv_q;
-	Button b_q;
+	Button b_q, b_share;
 	Set<String> keys;
 	HashMap<String, String> hm;
 	Integer count_q = 1;
+	String s_quote;
 	Random r;
 
 	@Override
@@ -32,7 +38,10 @@ public class Quotes extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		tv_q = (TextView) findViewById(R.id.tv_quotes);
 		b_q = (Button) findViewById(R.id.btn_q);
+		b_share = (Button) findViewById(R.id.btn_share);
 		b_q.setOnClickListener(this);
+		b_share.setOnClickListener(this);
+		
 		hm = new HashMap<String, String>();
 		// add key-value pair to hashmap
 		hm.put("1",	"The world has the habit of making room for the man whose words and actions show that he knows where he is going. \n\n-Napoleon Hill");
@@ -156,8 +165,79 @@ public class Quotes extends Activity implements OnClickListener {
 			b_q.setText("Next Thought");
 
 			break;
+		case R.id.btn_share:
+			
+			shareQuote();
+			break;
 
 		}
+	}
+
+	private void shareQuote() {
+		// TODO Auto-generated method stub
+		
+		//works for all; self made
+		Intent smsIntent = new Intent(Intent.ACTION_SEND);
+		smsIntent.setData(Uri.parse("smsto:"));
+		smsIntent.setType("text/plain");
+		
+		s_quote = tv_q.getText().toString();
+		smsIntent.putExtra(Intent.EXTRA_TEXT, s_quote);
+		try{
+			startActivity(smsIntent);
+			finish();
+			Log.i("Finished sharing Quote!", "");
+		}catch(Exception ex){
+			Toast.makeText(Quotes.this, "Message failed, please try again later.", Toast.LENGTH_SHORT).show();
+			//ex.printStackTrace();
+		}
+		
+		/*//yes = chaton + sms; no = whatsapp + viber 
+		 *Reason : SENDTO
+		Uri uri = Uri.parse("smsto:"+"");
+		Intent smsIntent = new Intent(Intent.ACTION_SENDTO, uri);
+		s_quote = tv_q.getText().toString();
+		smsIntent.putExtra("sms_body", s_quote);
+		try{
+			startActivity(smsIntent);
+		}catch(Exception ex){
+			Toast.makeText(Quotes.this, "Message failed, please try again later.", Toast.LENGTH_SHORT).show();
+			ex.printStackTrace();
+		}
+		*/
+		
+	/* only whatsapp
+		Intent waIntent = new Intent(Intent.ACTION_SEND);
+		waIntent.setType("text/plain");
+		s_quote = tv_q.getText().toString();
+		waIntent.setPackage("com.whatsapp");
+		if(waIntent != null){
+			waIntent.putExtra(Intent.EXTRA_TEXT, s_quote);
+			startActivity(Intent.createChooser(waIntent, "Share this quote"));
+		}else{
+			Toast.makeText(Quotes.this, "Whatsapp not Installed", Toast.LENGTH_SHORT).show();
+		}
+*/
+		
+		/*yes= chaton + sms
+		Log.i("Send SMS", "");
+
+		Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+		smsIntent.setData(Uri.parse("smsto:"));
+		smsIntent.setType("vnd.android-dir/mms-sms");
+		
+		smsIntent.putExtra("address", "");
+		s_quote = tv_q.getText().toString();
+		smsIntent.putExtra("sms_body", s_quote);
+		
+		try{
+			startActivity(smsIntent);
+			finish();
+			Log.i("Finished sharing Quote!", "");
+		}catch(android.content.ActivityNotFoundException ex){
+			Toast.makeText(Quotes.this, "Message failed, please try again later.", Toast.LENGTH_SHORT).show();
+		}
+		*/
 	}
 
 }
