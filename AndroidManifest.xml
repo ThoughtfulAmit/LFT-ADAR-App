@@ -47,7 +47,12 @@
             android:name=".MediaCoverage"
             android:label="@string/app_name" >
         </activity>
-        
+        <activity
+            android:name=".ActiveEvents"
+            android:label="Active Events"
+            android:theme="@android:style/Theme.Dialog" >
+            
+        </activity>
            <activity
             android:name=".ContactUs"
             android:label="@string/app_name" >

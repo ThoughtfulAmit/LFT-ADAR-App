@@ -29,7 +29,7 @@ public class MediaCoverage extends Activity implements OnClickListener{
 		th.addTab(specs);
 		specs = th.newTabSpec("tag2");
 		specs.setContent(R.id.tab2);
-		specs.setIndicator("Hindustan Times");
+		specs.setIndicator("HT");
 		th.addTab(specs);
 		specs = th.newTabSpec("tag3");
 		specs.setContent(R.id.tab3);
@@ -38,7 +38,7 @@ public class MediaCoverage extends Activity implements OnClickListener{
 
 		specs = th.newTabSpec("tag4");
 		specs.setContent(R.id.tab4);
-		specs.setIndicator("Careers360");
+		specs.setIndicator("Careers 360");
 		th.addTab(specs);
 
 	}
