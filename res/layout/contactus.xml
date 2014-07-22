@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="100" >
+    android:weightSum="100"
+    android:background="@drawable/quotes" >
 
     <ScrollView
         android:layout_width="fill_parent"

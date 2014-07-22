@@ -39,6 +39,10 @@
             android:label="@string/app_name" >
         </activity>
         
+          <activity
+            android:name=".Quotes"
+            android:label="@string/app_name" >
+        </activity>
            <activity
             android:name=".MediaCoverage"
             android:label="@string/app_name" >
@@ -78,6 +82,7 @@
         <activity
             android:name=".Menu"
             android:label="@string/app_name" >
+            
             <intent-filter>
                 <action android:name="io.github.stupidamigo.lftadarcampaign.MENU" />
 

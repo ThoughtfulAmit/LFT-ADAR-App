@@ -1082,7 +1082,8 @@ containing a value of this type.
         public static final int ht1=0x7f020059;
         public static final int ic_launcher=0x7f02005a;
         public static final int indianexpress=0x7f02005b;
-        public static final int wallpaper=0x7f02005c;
+        public static final int quotes=0x7f02005c;
+        public static final int wallpaper=0x7f02005d;
     }
     public static final class id {
         public static final int action_bar=0x7f07001c;
@@ -1102,22 +1103,23 @@ containing a value of this type.
         public static final int bPledge=0x7f070050;
         public static final int bSendMail_cu=0x7f07004b;
         public static final int beginning=0x7f070011;
+        public static final int btn_q=0x7f070059;
         public static final int button1=0x7f07003f;
         public static final int button2=0x7f070040;
         public static final int button4=0x7f070045;
         public static final int checkbox=0x7f07002d;
-        public static final int cm_campaign=0x7f07005f;
-        public static final int cm_exit=0x7f07005e;
+        public static final int cm_campaign=0x7f070061;
+        public static final int cm_exit=0x7f070060;
         public static final int collapseActionView=0x7f07000d;
         public static final int container=0x7f07003d;
         public static final int default_activity_button=0x7f070028;
         public static final int dialog=0x7f07000e;
         public static final int disableHome=0x7f070008;
         public static final int dropdown=0x7f07000f;
-        public static final int editTextPhoneNo1=0x7f070058;
-        public static final int editTextPhoneNo2=0x7f070059;
-        public static final int editTextPhoneNo3=0x7f07005a;
-        public static final int editTextSMS=0x7f07005b;
+        public static final int editTextPhoneNo1=0x7f07005a;
+        public static final int editTextPhoneNo2=0x7f07005b;
+        public static final int editTextPhoneNo3=0x7f07005c;
+        public static final int editTextSMS=0x7f07005d;
         public static final int edit_query=0x7f070030;
         public static final int end=0x7f070013;
         public static final int etClg_cu=0x7f070049;
@@ -1139,8 +1141,8 @@ containing a value of this type.
         public static final int linearLayout1=0x7f070053;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070029;
-        public static final int m_aboutUs=0x7f07005c;
-        public static final int m_exit=0x7f07005d;
+        public static final int m_aboutUs=0x7f07005e;
+        public static final int m_exit=0x7f07005f;
         public static final int middle=0x7f070012;
         public static final int never=0x7f070009;
         public static final int none=0x7f070010;
@@ -1175,11 +1177,12 @@ containing a value of this type.
         public static final int title=0x7f07002b;
         public static final int top_action_bar=0x7f070020;
         public static final int tvNLvl=0x7f070046;
+        public static final int tv_quotes=0x7f070058;
         public static final int tvphn11=0x7f070042;
         public static final int tvphn22=0x7f070043;
         public static final int tvphn33=0x7f070044;
-        public static final int u_exit=0x7f070060;
-        public static final int u_sos=0x7f070061;
+        public static final int u_exit=0x7f070062;
+        public static final int u_sos=0x7f070063;
         public static final int up=0x7f070021;
         public static final int useLogo=0x7f070003;
         public static final int withText=0x7f07000c;
@@ -1248,11 +1251,12 @@ containing a value of this type.
         public static final int iym=0x7f030023;
         public static final int media_coverage=0x7f030024;
         public static final int nationallevel=0x7f030025;
-        public static final int sdp=0x7f030026;
-        public static final int splash=0x7f030027;
-        public static final int support_simple_spinner_dropdown_item=0x7f030028;
-        public static final int user_open=0x7f030029;
-        public static final int visitforcompassion=0x7f03002a;
+        public static final int quotes=0x7f030026;
+        public static final int sdp=0x7f030027;
+        public static final int splash=0x7f030028;
+        public static final int support_simple_spinner_dropdown_item=0x7f030029;
+        public static final int user_open=0x7f03002a;
+        public static final int visitforcompassion=0x7f03002b;
     }
     public static final class menu {
         public static final int cool_menu=0x7f0e0000;
