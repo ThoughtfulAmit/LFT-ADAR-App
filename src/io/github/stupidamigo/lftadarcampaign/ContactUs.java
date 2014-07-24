@@ -63,9 +63,9 @@ public class ContactUs extends Activity implements OnClickListener {
 
 			convertETVarsIntoStrings();
 
-			String emailaddress[] = { "coreteam.lft@gmail.com" };
+			String emailaddress[] = { "president.lft@gmail.com" };
 			
-			String message = "Dear LFT Team,"
+			String message = "Dear LFT President,"
 					+"\nMy message is: "+"\n"+msg+"\n\nMy details are:"
 					+"\nName: "+name
 					+"\nPhn No.: "+phn

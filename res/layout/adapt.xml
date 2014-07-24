@@ -12,7 +12,7 @@
             android:id="@+id/tvNLvl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Our green initiative- Adopt A Plant (ADAPT) plants saplings across all campuses with LFT Clubs once a year.\n\nThis campaign is usually conducted in the month of September by each college unit. As a part of the campaign the students motivate their peers to join them in planting and adopting a plant. These students come together to plant saplings in over 100 locations in and around their colleges.\n\nA total of 8000 saplings have been planted and adopted by the LFT members from various college clubs who pledged to plant and nurture the saplings in their years on campus." >
+            android:text="Our green initiative- Adopt A Plant (ADAPT) is aimed at creating a greener world around us by joining hands to plant one spaling per person. Last year, the campaign saw over 10,000 saplings planted across Delhi/NCR." >
         </TextView>
     </ScrollView>
 

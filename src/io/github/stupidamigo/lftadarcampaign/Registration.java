@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CampaignManager extends Activity implements OnClickListener {
+public class Registration extends Activity implements OnClickListener {
 
 	EditText personsEmail, personsName, personsPhn, personsYr;
 	String emailAdd, name, phn, yr;
@@ -105,7 +105,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
 				Toast.makeText(getApplicationContext(),
-						"Fill Campaign Manager Settings", Toast.LENGTH_LONG)
+						"Fill Registration Settings\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
 						.show();
 			} else {
 				
@@ -128,7 +128,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 
 						+ "\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills"
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
-						+ "And again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse";
+						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
@@ -159,7 +159,7 @@ public class CampaignManager extends Activity implements OnClickListener {
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
 				Toast.makeText(getApplicationContext(),
-						"Fill Campaign Manager Settings", Toast.LENGTH_LONG)
+						"Fill Registration Settings\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
 						.show();
 			} else {
 				String emailaddress[] = { emailAdd };
@@ -220,4 +220,6 @@ public class CampaignManager extends Activity implements OnClickListener {
 		super.onPause();
 		finish();
 	}
+
+
 }
