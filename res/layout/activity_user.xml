@@ -22,9 +22,9 @@
             android:id="@+id/button1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="62dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="15dp"
-            android:text="Start" />
+            android:text="SCREAM" />
 
         <Button
             android:id="@+id/button2"
@@ -93,7 +93,7 @@
         android:id="@+id/container"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
         <Button
             android:id="@+id/button4"
@@ -102,6 +102,15 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp"
             android:text="Send EMERGENCY msg" />
+
+        <TextView
+            android:id="@+id/tv_smscharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            
+            android:layout_marginTop="15dp"
+            android:text="Normal SMS charges apply for each sms sent" />
     </LinearLayout>
 
 </LinearLayout>

@@ -105,7 +105,7 @@ public class Registration extends Activity implements OnClickListener {
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
 				Toast.makeText(getApplicationContext(),
-						"Fill Registration Settings\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
+						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
 						.show();
 			} else {
 				
@@ -159,7 +159,7 @@ public class Registration extends Activity implements OnClickListener {
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
 				Toast.makeText(getApplicationContext(),
-						"Fill Registration Settings\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
+						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
 						.show();
 			} else {
 				String emailaddress[] = { emailAdd };

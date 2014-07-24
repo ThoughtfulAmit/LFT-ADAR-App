@@ -1,30 +1,25 @@
 package io.github.stupidamigo.lftadarcampaign;
 
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.telephony.SmsManager;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Build;
-import android.preference.PreferenceManager;
 
-public class User extends ActionBarActivity implements OnClickListener{
+public class AntiRagging extends ActionBarActivity implements OnClickListener{
 
 	Button bstart, bstop;
 	//Button bchk;
@@ -48,7 +43,7 @@ public class User extends ActionBarActivity implements OnClickListener{
 
 	private void initialize() {
 		// TODO Auto-generated method stub
-		scream = MediaPlayer.create(User.this,
+		scream = MediaPlayer.create(AntiRagging.this,
 				R.raw.stupid_amigo_deranged_women_scream);
 		scream.setLooping(true);
 		bstart = (Button) findViewById(R.id.button1);
@@ -98,49 +93,49 @@ public class User extends ActionBarActivity implements OnClickListener{
 			//to avoid first time issue
 			if(phn1.contentEquals("Set Phone No.1")){
 				Toast.makeText(getApplicationContext(),
-						errorMsg + "1st phone no.", Toast.LENGTH_LONG).show();
+						errorMsg + "1st phone no.", Toast.LENGTH_SHORT).show();
 			}else{
 
 				smsManager.sendTextMessage(phn1, null, message, null, null);
 				Toast.makeText(getApplicationContext(), "SMS sent on 1st phone no.",
-						Toast.LENGTH_LONG).show();
+						Toast.LENGTH_SHORT).show();
 			}
 		} catch (Exception e) {
 			
 			Toast.makeText(getApplicationContext(),
-					errorMsg + "1st phone no.", Toast.LENGTH_LONG).show();
+					errorMsg + "1st phone no.", Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
 		try {
 			if(phn2.contentEquals("Set Phone No.2")){
 				Toast.makeText(getApplicationContext(),
-						errorMsg + "2nd phone no.", Toast.LENGTH_LONG).show();
+						errorMsg + "2nd phone no.", Toast.LENGTH_SHORT).show();
 			}else{
 
 				smsManager.sendTextMessage(phn2, null, message, null, null);
 				Toast.makeText(getApplicationContext(), "SMS sent on 2nd phone no.",
-						Toast.LENGTH_LONG).show();	
+						Toast.LENGTH_SHORT).show();	
 			}
 		} catch (Exception e) {
 			
 			Toast.makeText(getApplicationContext(),
-					errorMsg + "2nd phone no.", Toast.LENGTH_LONG).show();
+					errorMsg + "2nd phone no.", Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
 		try {
 			if(phn3.contentEquals("Set Phone No.3")){
 				Toast.makeText(getApplicationContext(),
-						errorMsg + "3rd phone no.", Toast.LENGTH_LONG).show();
+						errorMsg + "3rd phone no.", Toast.LENGTH_SHORT).show();
 			}
 			else{
 
 				smsManager.sendTextMessage(phn3, null, message, null, null);
 				Toast.makeText(getApplicationContext(), "SMS sent on 3rd phone no.",
-						Toast.LENGTH_LONG).show();	
+						Toast.LENGTH_SHORT).show();	
 			}
 		} catch (Exception e) {
 			Toast.makeText(getApplicationContext(),
-					errorMsg + "3rd phone no.", Toast.LENGTH_LONG).show();
+					errorMsg + "3rd phone no.", Toast.LENGTH_SHORT).show();
 			e.printStackTrace();
 		}
 	}
@@ -216,5 +211,7 @@ public class User extends ActionBarActivity implements OnClickListener{
 			
 		}
 	}
+
+
 
 }
