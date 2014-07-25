@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,13 +32,12 @@ public class Registration extends Activity implements OnClickListener {
 		initializeVars();
 		LftPledge.setOnClickListener(this);
 		LftMember.setOnClickListener(this);
-		
-		//for hiding the Keyboard after using an EditText
-		imm1 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		imm2 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		imm3 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		imm4 =(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-		
+
+		// for hiding the Keyboard after using an EditText
+		imm1 = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm2 = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm3 = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm4 = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
 	}
 
@@ -94,45 +94,45 @@ public class Registration extends Activity implements OnClickListener {
 
 		switch (arg0.getId()) {
 		case R.id.bMember:
-			
-			//hiding keyboard
+
+			// hiding keyboard
 			imm1.hideSoftInputFromWindow(personsName.getWindowToken(), 0);
 			imm2.hideSoftInputFromWindow(personsEmail.getWindowToken(), 0);
 			imm3.hideSoftInputFromWindow(personsPhn.getWindowToken(), 0);
 			imm4.hideSoftInputFromWindow(personsYr.getWindowToken(), 0);
-			
+
 			convertETVarsIntoStrings();
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
-				Toast.makeText(getApplicationContext(),
-						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
-						.show();
+				Toast.makeText(
+						getApplicationContext(),
+						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!",
+						Toast.LENGTH_LONG).show();
 			} else {
-				
+
 				String emailaddress[] = { emailAdd };
-				String[] BCC = {"coreteam.lft@gmail.com"};
-				String message = "Hello "
+				String[] BCC = { "coreteam.lft@gmail.com" };
+				String message1 = "Hello "
 						+ name
 						+ ",\nYou just became a member of LFT by paying the annual fee of Rs.50 only."
 						+ "We welcome you in the ever expanding family of Leaders For Tomorrow. Your details as per our records are: "
 						+ "\nName: "
 						+ name
-						+ "\nEmail: "
+						+ ",    Email: "
 						+ emailAdd
 						+ "\nPhone No.: "
 						+ phn
-						+ "\nCollege: "
+						+ ",    College: "
 						+ clg
-						+ "\nYear: "
-						+ yr
-
-						+ "\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills"
+						+ ",    Year: "
+						+ yr;
+				String message2 = "\n\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
-						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse";
+						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse.";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
-				
+
 				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
 						emailaddress);
 				emailIntent.putExtra(Intent.EXTRA_BCC, BCC);
@@ -140,53 +140,53 @@ public class Registration extends Activity implements OnClickListener {
 						"LFT Member via " + vname + "," + clg);
 				// Subject = "ADAR Member via" + volunteerName + "," +
 				// collegeName
-				emailIntent.setType("plain/text");
+				emailIntent.setType("text/html");
 				emailIntent
-						.putExtra(android.content.Intent.EXTRA_TEXT, message);
+						.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(message1 + "\n\nTo download our Android App from Google PlayStore: <a href=\""+ "https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign" + "\">Click Here</a>" + message2));
 				startActivity(emailIntent);
 			}
 
 			break;
 		case R.id.bPledge:
 
-			//hiding keyboard
+			// hiding keyboard
 			imm1.hideSoftInputFromWindow(personsName.getWindowToken(), 0);
 			imm2.hideSoftInputFromWindow(personsEmail.getWindowToken(), 0);
 			imm3.hideSoftInputFromWindow(personsPhn.getWindowToken(), 0);
 			imm4.hideSoftInputFromWindow(personsYr.getWindowToken(), 0);
-			
+
 			convertETVarsIntoStrings();
 			if ((vname.contentEquals("")) || (pwd.contentEquals(""))
 					|| (clg.contentEquals(""))) {
-				Toast.makeText(getApplicationContext(),
-						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!", Toast.LENGTH_LONG)
-						.show();
+				Toast.makeText(
+						getApplicationContext(),
+						"Fill Registration Settings in Menu\nNOTE: Only authorized volunteer can register you!",
+						Toast.LENGTH_LONG).show();
 			} else {
 				String emailaddress[] = { emailAdd };
-				String[] BCC = {"coreteam.lft@gmail.com"};
-				
-				String message = "Hello "
+				String[] BCC = { "coreteam.lft@gmail.com" };
+
+				String message1 = "Hello "
 						+ name
 						+ ",\nYou just took a Pledge to stand in favour of Anti-Drug and Anti-Ragging Campaigns. You can also become a member of LFT by paying the annual fee of Rs.50 only."
 						+ "We welcome you in the ever expanding family of Leaders For Tomorrow. Your details as per our records are: "
 						+ "\nName: "
 						+ name
-						+ "\nEmail: "
+						+ ",    Email: "
 						+ emailAdd
 						+ "\nPhone No.: "
 						+ phn
-						+ "\nCollege: "
+						+ ",    College: "
 						+ clg
-						+ "\nYear: "
-						+ yr
-
-						+ "\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills"
+						+ ",    Year: "
+						+ yr;
+				String message2 = "\n\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
-						+ "And again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse";
+						+ "And again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse.";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
-				
+
 				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL,
 						emailaddress);
 				emailIntent.putExtra(Intent.EXTRA_BCC, BCC);
@@ -194,9 +194,9 @@ public class Registration extends Activity implements OnClickListener {
 						"LFT Pledge via " + vname + "," + clg);
 				// Subject = "ADAR Pledge via" + volunteerName + "," +
 				// collegeName
-				emailIntent.setType("plain/text");
+				emailIntent.setType("text/html");
 				emailIntent
-						.putExtra(android.content.Intent.EXTRA_TEXT, message);
+				.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(message1 + "\n\nTo download our Android App from Google PlayStore: <a href=\""+ "https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign" + "\">Click Here</a>" + message2));
 				startActivity(emailIntent);
 			}
 
@@ -220,6 +220,5 @@ public class Registration extends Activity implements OnClickListener {
 		super.onPause();
 		finish();
 	}
-
 
 }
