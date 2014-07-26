@@ -107,7 +107,7 @@
         </activity>
         <activity
             android:name=".NationalLevel"
-            android:label="LFT Summit"
+            android:label="Date with Development"
             android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="io.github.stupidamigo.lftadarcampaign.NATIONALLEVEL" />
@@ -116,15 +116,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Adar"
+            android:name=".StateLevel"
             android:label="Anti Drugs and Anti Ragging"
             android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
-                <action android:name="io.github.stupidamigo.lftadarcampaign.ADAR" />
+                <action android:name="io.github.stupidamigo.lftadarcampaign.STATELEVEL" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name=".Adapt"
             android:label="Adopt A Plant Campaign - ADAPT"

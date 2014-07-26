@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 public class CampusActivities extends ListActivity {
 
-	String classes[] = { "Adar", "Adapt", "Cleanathon", "CollectionDrives", "VisitForCompassion" };
+	String classes[] = { "Adapt", "Cleanathon", "CollectionDrives", "VisitForCompassion" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -118,18 +118,22 @@ public class Registration extends Activity implements OnClickListener {
 						+ "We welcome you in the ever expanding family of Leaders For Tomorrow. Your details as per our records are: "
 						+ "\nName: "
 						+ name
-						+ ",    Email: "
+						+ "\nEmail: "
 						+ emailAdd
 						+ "\nPhone No.: "
 						+ phn
-						+ ",    College: "
+						+ "\nCollege: "
 						+ clg
-						+ ",    Year: "
-						+ yr;
+						+ "\nCourse/Year: "
+						+ yr
+						+"\n\n";
+				
+				String applink = "To DOWNLOAD OUR ANDROID APP from Google PlayStore: \nClick the following link https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign";
+				
 				String message2 = "\n\nFollow us on Facebook: www.facebook.com/LeadersForTomorrow to stay tuned to our events."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
 						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse."
-						+"\nYou can also take up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no) on Facebook";
+						+ "\nTake up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no.) on Facebook\n";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
@@ -143,7 +147,7 @@ public class Registration extends Activity implements OnClickListener {
 				// collegeName
 				emailIntent.setType("text/html");
 				emailIntent
-						.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(message1 + "\n\nTo download our Android App from Google PlayStore: <a href=\""+ "https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign" + "\">Click Here</a>" + message2));
+						.putExtra(android.content.Intent.EXTRA_TEXT, message1 + applink + message2);
 				startActivity(emailIntent);
 			}
 
@@ -173,18 +177,22 @@ public class Registration extends Activity implements OnClickListener {
 						+ "We welcome you in the ever expanding family of Leaders For Tomorrow. Your details as per our records are: "
 						+ "\nName: "
 						+ name
-						+ ",    Email: "
+						+ "\nEmail: "
 						+ emailAdd
 						+ "\nPhone No.: "
 						+ phn
-						+ ",    College: "
+						+ "\nCollege: "
 						+ clg
-						+ ",    Year: "
-						+ yr;
+						+ "\nCourse/Year: "
+						+ yr
+						+"\n\n";
+				
+				String applink = "To DOWNLOAD OUR ANDROID APP from Google PlayStore: \nClick the following link https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign";
+				
 				String message2 = "\n\nFollow us on Facebook: www.facebook.com/LeadersForTomorrow to stay tuned to our events."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
 						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse."
-						+"\nYou can also take up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no) on Facebook";
+						+ "\nTake up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no.) on Facebook\n";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
@@ -198,7 +206,7 @@ public class Registration extends Activity implements OnClickListener {
 				// collegeName
 				emailIntent.setType("text/html");
 				emailIntent
-				.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(message1 + "\n\nTo download our Android App from Google PlayStore: <a href=\""+ "https://play.google.com/store/apps/details?id=io.github.stupidamigo.lftadarcampaign" + "\">Click Here</a>" + message2));
+				.putExtra(android.content.Intent.EXTRA_TEXT, message1 + applink + message2);
 				startActivity(emailIntent);
 			}
 

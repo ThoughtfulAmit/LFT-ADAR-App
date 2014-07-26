@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 public class Events extends ListActivity {
 
-	String classes[] = { "NationalLevel", "CampusActivities" };
+	String classes[] = { "NationalLevel", "StateLevel", "CampusActivities" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
