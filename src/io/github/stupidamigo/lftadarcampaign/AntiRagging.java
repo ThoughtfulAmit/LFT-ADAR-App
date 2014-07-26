@@ -19,8 +19,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AntiRagging extends ActionBarActivity implements OnClickListener{
-
+public class AntiRagging {
+//public class AntiRagging extends ActionBarActivity implements OnClickListener{
+/*
 	Button bstart, bstop;
 	//Button bchk;
 	MediaPlayer scream;
@@ -168,9 +169,7 @@ public class AntiRagging extends ActionBarActivity implements OnClickListener{
 		return false;
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
+	
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
@@ -213,5 +212,5 @@ public class AntiRagging extends ActionBarActivity implements OnClickListener{
 	}
 
 
-
+*/
 }

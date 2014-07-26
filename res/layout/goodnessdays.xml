@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/tvGD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our social media campaign aimed at spreading good around you by taking up one good deed a day.\nJust follow 4 simple steps:\n\n1. Register yourself at \nhttp://tinyurl.com/30daysofgoodness\n2. Do good deed a day for the people around you\n3. Click and post photos, videos or just write about what you did on your Facebook wall for 30 days with ‪#‎leadersfortomorrow‬ ‪#‎30daysofgoodness ‬‪#‎day‬(no.)\n\n4. Continue doing a good deed for 30 days" >
+        </TextView>
+    </ScrollView>
+
+</LinearLayout>

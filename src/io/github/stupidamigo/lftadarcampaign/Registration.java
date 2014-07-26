@@ -126,9 +126,10 @@ public class Registration extends Activity implements OnClickListener {
 						+ clg
 						+ ",    Year: "
 						+ yr;
-				String message2 = "\n\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills."
+				String message2 = "\n\nFollow us on Facebook: www.facebook.com/LeadersForTomorrow to stay tuned to our events."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
-						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse.";
+						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse."
+						+"\nYou can also take up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no) on Facebook";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);
@@ -180,9 +181,10 @@ public class Registration extends Activity implements OnClickListener {
 						+ clg
 						+ ",    Year: "
 						+ yr;
-				String message2 = "\n\nFollow us on Facebook: www.facebook.com/leadersfortomorrow for all the latest happenings and explore great opportunities to enhance your leadeship skills."
+				String message2 = "\n\nFollow us on Facebook: www.facebook.com/LeadersForTomorrow to stay tuned to our events."
 						+ "\nYou can contact us at president.lft@gmail.com in case of any query. We would love to help you!"
-						+ "And again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse.";
+						+ "\n\nAnd again, Thanks for becoming a part of ADAR, our awareness campaign, to eradicate the twin menaces of ragging and substance abuse."
+						+"\nYou can also take up our 30 days of goodness campaign and spread the goodness around you by doing one good deed a day and spreading the message through facebook. Register with us at http://tinyurl.com/30daysofgoodness and post the good deeds you do with #leadersfortomorrow #30daysofgoodness #gooddeed(no) on Facebook";
 
 				Intent emailIntent = new Intent(
 						android.content.Intent.ACTION_SEND);

@@ -12,7 +12,7 @@
             android:id="@+id/tvNLvl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Our green initiative- Adopt A Plant (ADAPT) is aimed at creating a greener world around us by joining hands to plant one spaling per person. Last year, the campaign saw over 10,000 saplings planted across Delhi/NCR." >
+            android:text="Our green initiative- Adopt A Plant (ADAPT) is aimed at creating a greener world around us by joining hands to plant one sapling per person. Last year, the campaign saw over 10,000 saplings planted across Delhi/NCR." >
         </TextView>
     </ScrollView>
 
